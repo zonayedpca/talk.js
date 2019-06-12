@@ -1,8 +1,7 @@
 .intro-area {
   position: relative;
   background: #ecdb43;
-  min-height: 540px;
-  height: 100vh;
+  height: 590px;
 }
 
 .intro-area::after {
