@@ -32,12 +32,12 @@ export const RegisterForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group">
-        <Input name="name" placeholder="Enter your name" value={name} onChange={handleChange} />
-        <Input name="phone"placeholder="Enter your phone" value={phone} onChange={handleChange} />
+        <Input name="name" placeholder="Your Name" value={name} onChange={handleChange} />
+        <Input name="phone"placeholder="Your Phone" value={phone} onChange={handleChange} />
       </div>
       <div className="form-group">
-        <Input name="email" placeholder="Enter your Email" value={email} onChange={handleChange} />
-        <Input name="fb" placeholder="Enter your Facebook ID" value={fb} onChange={handleChange} />
+        <Input name="email" placeholder="Your Email" value={email} onChange={handleChange} />
+        <Input name="fb" placeholder="Your Facebook Username" value={fb} onChange={handleChange} />
       </div>
       <Button style={{ marginTop: 25, backgroundColor: hasAllData ? '#2e2e2e' : '#bebebe', color: hasAllData ? '#fff' : '#2e2e2e', cursor: hasAllData ? 'pointer' : 'not-allowed' }} type="submit" title="Register" />
     </form>
