@@ -14,6 +14,7 @@ export const RegisterForm = () => {
   });
 
   const { name, phone, email, fb } = data;
+  const hasAllData = name.length && phone.length && email.length && fb.length;
 
   const handleChange = (input, name) => {
     setData({ ...data, [name]: input });
@@ -21,7 +22,7 @@ export const RegisterForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(name.length && phone.length && email.length && fb.length) {
+    if(hasAllData) {
       console.log('Submit Now to Firebase');
     } else {
       handleChange('All the information are required!', 'error');
@@ -38,7 +39,7 @@ export const RegisterForm = () => {
         <Input name="email" placeholder="Enter your Email" value={email} onChange={handleChange} />
         <Input name="fb" placeholder="Enter your Facebook ID" value={fb} onChange={handleChange} />
       </div>
-      <Button type="submit" title="Register" />
+      <Button style={{ marginTop: 25, backgroundColor: hasAllData ? '#2e2e2e' : '#bebebe', color: hasAllData ? '#fff' : '#2e2e2e', cursor: hasAllData ? 'pointer' : 'not-allowed' }} type="submit" title="Register" />
     </form>
   )
 }

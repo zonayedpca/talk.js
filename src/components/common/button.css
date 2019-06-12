@@ -4,4 +4,5 @@ button {
   font-weight: 900;
   border-radius: 4px;
   text-transform: uppercase;
+  cursor: pointer;
 }
