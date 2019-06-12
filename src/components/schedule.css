@@ -1,6 +1,7 @@
 table {
   border: solid 2px #ebebeb;
   width: 100%;
+  border-collapse: collapse;
 }
 
 tbody th {
@@ -14,6 +15,7 @@ tbody>tr>* {
 
 tbody tr th {
   background: #ebebeb;
+  border-bottom: solid 2px #2e2e2e;
 }
 
 tbody tr th,
@@ -23,5 +25,5 @@ tbody tr .no {
 }
 
 tbody tr:hover {
-  background: #ebebeb; 
+  background: #ebebeb;
 }
