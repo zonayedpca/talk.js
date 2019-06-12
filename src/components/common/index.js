@@ -5,3 +5,4 @@ export * from './container';
 export * from './title';
 export * from './button';
 export * from './registerform';
+export * from './locationmap';

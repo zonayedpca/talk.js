@@ -1,12 +1,14 @@
 import React from 'react';
 
-import { Container, Title } from './common';
+import { LocationMap } from './common';
 
 export default () => (
-  <div>
-    <Container>
-      <Title title="Location" content="We will get you there" />
-      <p>Location</p>
-    </Container>
+  <div className="location-area">
+    <LocationMap
+      googleMapURL={`https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_GOOGLE_MAP_API_KEY}&v=3.exp&libraries=geometry,drawing,places`}
+      loadingElement={<div style={{ height: `100%` }} />}
+      containerElement={<div style={{ height: `400px` }} />}
+      mapElement={<div style={{ height: `100%` }} />}
+    />
   </div>
 )
