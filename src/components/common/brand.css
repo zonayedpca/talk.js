@@ -1,0 +1,14 @@
+.brand-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.brand-area p {
+  color: #2e2e2e;
+  font-size: 36px;
+  margin-left: 5px;
+  font-weight: 900;
+  padding: 0 10px;
+}

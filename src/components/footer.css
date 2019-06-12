@@ -27,3 +27,8 @@
   padding: 25px 0;
   border-bottom: solid 3px #fff;
 }
+
+.event h3 {
+  color: #fff;
+  font-size: 48px;
+}

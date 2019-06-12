@@ -1,4 +1,5 @@
 export * from './logo';
+export * from './brand';
 export * from './navbar';
 export * from './container';
 export * from './title';
