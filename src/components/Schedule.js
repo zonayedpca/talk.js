@@ -2,6 +2,21 @@ import React from 'react';
 
 import { Container, Title } from './common';
 
+import './schedule.css';
+
+const speakers = [
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' },
+  { name: 'Someone Will Be', topic: 'Something Right', time: '11:00PM' }
+]
+
 export default () => (
   <div className="schedule-area">
     <Container>
@@ -10,59 +25,19 @@ export default () => (
         <table>
           <tbody>
             <tr>
-              <th>#</th>
+              <th className="no">#</th>
               <th>Session</th>
               <th>Speaker</th>
               <th>Time</th>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Something Right</td>
-              <td>Someone</td>
-              <td>11:00PM</td>
-            </tr>
+            { speakers.map(({ name, topic, time }, index) => (
+              <tr key={index}>
+                <td className="no">{index + 1}</td>
+                <td>{name}</td>
+                <td>{topic}</td>
+                <td>{time}</td>
+              </tr>
+            )) }
           </tbody>
         </table>
       </div>

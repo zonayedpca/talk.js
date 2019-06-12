@@ -1,0 +1,27 @@
+table {
+  border: solid 2px #ebebeb;
+  width: 100%;
+}
+
+tbody th {
+  text-align: left;
+}
+
+tbody>tr>* {
+  padding: 15px 10px;
+  border: solid 1px #ebebeb;
+}
+
+tbody tr th {
+  background: #ebebeb;
+}
+
+tbody tr th,
+tbody tr .no {
+  text-align: center;
+  font-weight: 900;
+}
+
+tbody tr:hover {
+  background: #ebebeb; 
+}
