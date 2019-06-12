@@ -1,6 +1,7 @@
 .intro-area {
   position: relative;
   background: #ecdb43;
+  min-height: 540px;
   height: 100vh;
 }
 
@@ -22,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   height: 400px;
   z-index: 1;
 }
