@@ -8,13 +8,13 @@
   justify-content: center;
 }
 
-.single {
+.sponsor .single {
   width: calc(100%/3 - 30px);
   padding: 45px 25px;
   padding-top: 0;
   margin: 0 15px;
 }
 
-.single img {
+.sponsor .single img {
   width: calc(100% - 50px);
 }

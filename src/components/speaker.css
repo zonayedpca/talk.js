@@ -1,3 +1,31 @@
 .speaker-area {
   background: #ebebeb;
 }
+
+.speaker {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.speaker .single {
+  width: calc(100% / 4 - 30px);
+  margin: 0 15px;
+  margin-bottom: 25px;
+}
+
+.speaker .single img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.speaker .single .info {
+  margin-top: 15px;
+}
+
+.speaker .single .info h4 {
+  font-size: 26px;
+}
+
+.speaker .single .info p {
+  font-weight: 300;
+}
