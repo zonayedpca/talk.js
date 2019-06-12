@@ -1,0 +1,7 @@
+button {
+  border: none;
+  padding: 15px 25px;
+  font-weight: 900;
+  border-radius: 4px;
+  text-transform: uppercase;
+}

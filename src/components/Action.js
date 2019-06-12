@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Container, Title, Button, RegisterForm } from './common';
 
+import './action.css';
+
 export default () => {
   const [showForm, setShowForm] = useState(false);
 
