@@ -1,0 +1,39 @@
+.intro-area {
+  background: #ecdb43;
+}
+
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+}
+
+.intro p {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.intro h1 {
+  font-size: 48px;
+}
+
+.details {
+  margin-top: 25px;
+}
+
+.details ul li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.details ul li p {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.details ul li p small {
+  display: block;
+  font-weight: 300;
+}

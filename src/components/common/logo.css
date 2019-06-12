@@ -1,0 +1,38 @@
+.logo-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background: #2e2e2e;
+  transform: rotate(45deg);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.logo img {
+  margin: 8px;
+  padding: 2px;
+  height: auto;
+  width: 25px;
+}
+
+.logo-area p {
+  color: #2e2e2e;
+  font-size: 36px;
+  margin-left: 5px;
+  font-weight: 900;
+  padding: 0 10px;
+}

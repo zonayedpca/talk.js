@@ -1,0 +1,29 @@
+.footer-area {
+  background: #2e2e2e;
+  text-align: center;
+  color: #fff;
+}
+
+.footer {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.footer ul {
+  padding: 25px 0;
+}
+
+.footer ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.event {
+  padding: 25px 0;
+  border-bottom: solid 3px #fff;
+}
