@@ -23,7 +23,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   height: 400px;
   z-index: 1;
 }
