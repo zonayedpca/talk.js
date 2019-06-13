@@ -33,9 +33,9 @@ export default () => (
             { speakers.map(({ name, topic, time }, index) => (
               <tr key={index}>
                 <td className="no">{index + 1}</td>
+                <td className="topic">{topic}</td>
                 <td>{name}</td>
-                <td>{topic}</td>
-                <td>{time}</td>
+                <td className="time">{time}</td>
               </tr>
             )) }
           </tbody>

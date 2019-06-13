@@ -9,6 +9,12 @@
   margin: 0 auto;
 }
 
+.footer .logo {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  transform: scale(1.5);
+}
+
 .footer ul {
   padding: 25px 0;
 }

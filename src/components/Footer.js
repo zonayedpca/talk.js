@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container } from './common';
+import { Container, Logo } from './common';
 
 import './footer.css';
 
@@ -9,6 +9,7 @@ export default () => (
     <Container>
       <div className="footer">
         <div className="event">
+          <Logo />
           <h3>Meetup.js</h3>
         </div>
         <ul>

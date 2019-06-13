@@ -1,5 +1,4 @@
 table {
-  border: solid 2px #ebebeb;
   width: 100%;
   border-collapse: collapse;
 }
@@ -14,14 +13,23 @@ tbody>tr>* {
 }
 
 tbody tr th {
-  background: #ebebeb;
-  border-bottom: solid 2px #2e2e2e;
+  background: #045fa4;
+  color: #fff;
+  border: none;
+}
+
+tbody tr .no {
+  text-align: center;
+}
+
+tbody tr .time {
+  font-weight: 700;
+  color: #045fa4;
 }
 
 tbody tr th,
 tbody tr .no {
-  text-align: center;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 tbody tr:hover {

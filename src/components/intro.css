@@ -27,9 +27,33 @@
   width: 100px;
   border-radius: 8px;
   transform: rotate(45deg);
+  z-index: -1;
 }
 
-.intro {
+.intro-area .info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intro-area .info>* {
+  flex: 1;
+}
+
+.intro-area .info .animation {
+  position: relative;
+  text-align: left;
+  flex: 1;
+  z-index: 1;
+}
+
+.intro-area .info .animation img {
+  position: relative;
+  animation: guyAnimated 1s alternate infinite;
+}
+
+.intro-area .intro {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -37,6 +61,7 @@
   justify-content: center;
   height: 400px;
   z-index: 1;
+  flex: 2;
 }
 
 .intro p {
@@ -97,5 +122,13 @@
 
   .details ul li p {
     font-size: 18px;
+  }
+}
+
+@keyframes guyAnimated {
+  from {
+    top: 0;
+  } to {
+    top: -15px;
   }
 }
