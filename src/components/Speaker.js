@@ -20,8 +20,8 @@ export default () => (
     <Container>
       <Title title="Speaker" content="People You would love to listen" />
       <div className="speaker">
-        { speakers.map(({ name, title, profile }) => (
-          <div className="single">
+        { speakers.map(({ name, title, profile }, index) => (
+          <div key={index} className="single">
             <img alt={name} src={require(`../assets/speakers/${profile}.jpg`)} />
             <div className="info">
               <h4>{name}</h4>

@@ -18,8 +18,8 @@ export default () => (
     <Container>
       <Title title="Sponsor" content="People who made this possible" />
       <div className="sponsor">
-        { sponsors.map(({ title, image }) => (
-          <div className="single">
+        { sponsors.map(({ title, image }, index) => (
+          <div key={index} className="single">
             <img alt={title} src={image} />
           </div>
         )) }
