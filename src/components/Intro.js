@@ -10,7 +10,7 @@ export default () => (
       <Navbar />
       <div className="intro">
         <p>A Long-awaited Developers Event</p>
-        <h1>Grand JavaScript Meetup</h1>
+        <h1>Grand JavaScript Meetup!</h1>
         <div className="details">
           <ul>
             <li>
