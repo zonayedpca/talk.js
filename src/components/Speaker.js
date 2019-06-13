@@ -22,7 +22,9 @@ export default () => (
       <div className="speaker">
         { speakers.map(({ name, title, profile }, index) => (
           <div key={index} className="single">
-            <img alt={name} src={require(`../assets/speakers/${profile}.jpg`)} />
+            <div className="image">
+              <img alt={name} src={require(`../assets/speakers/${profile}.jpg`)} />
+            </div>
             <div className="info">
               <h4>{name}</h4>
               <p>{title}</p>

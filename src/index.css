@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700&display=swap');
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,6 +34,6 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 900;
+  font-weight: 700;
   color: #2e2e2e;
 }

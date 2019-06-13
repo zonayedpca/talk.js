@@ -4,8 +4,12 @@
 }
 
 .title h2 {
-  font-size: 36px;
+  font-size: 48px;
   margin-bottom: 15px;
+}
+
+.title p {
+  font-size: 24px;
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,10 @@
 .intro-area {
   position: relative;
   background: #ecdb43;
-  height: 590px;
+  height: 700px;
 }
 
-.intro-area::after {
+.intro-area::before {
   content: '';
   position: absolute;
   top: 0;
@@ -13,8 +13,20 @@
   width: 100%;
   background: url('../assets/images/bg.png');
   background-size: cover;
-  opacity: 0.35;
+  opacity: 1;
   z-index: 0;
+}
+
+.intro-area::after {
+  content: "";
+  position: absolute;
+  bottom: -45px;
+  left: calc(50% - 50px);
+  height: 100px;
+  background: #ecdb43;
+  width: 100px;
+  border-radius: 8px;
+  transform: rotate(45deg);
 }
 
 .intro {
@@ -29,24 +41,24 @@
 
 .intro p {
   font-weight: 300;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .intro h1 {
-  font-size: 48px;
+  font-size: 52px;
 }
 
 .details {
-  margin-top: 25px;
+  margin-top: 45px;
 }
 
 .details ul li {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .details ul li p {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 900;
 }
 

@@ -9,6 +9,9 @@ export default () => (
     <Container topPad="0">
       <Navbar />
       <div className="intro">
+        <div className="announcement">
+          Mike
+        </div>
         <p>A Long-awaited Developers Event</p>
         <h1>Grand JavaScript Meetup!</h1>
         <div className="details">

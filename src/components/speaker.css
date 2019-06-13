@@ -8,14 +8,40 @@
 }
 
 .speaker .single {
+  position: relative;
   width: calc(100% / 4 - 30px);
   margin: 0 15px;
+  text-align: center;
   margin-bottom: 25px;
 }
 
-.speaker .single img {
+.speaker .single .image {
+  position: relative;
+  padding: 25px;
+  z-index: 1;
+}
+
+.speaker .single .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   width: 100%;
-  border-radius: 8px;
+  background: url('../assets/speakers/bg.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.speaker .single img {
+  position: relative;
+  width: 100%;
+  border-radius: 100%;
+  border: solid 5px #ecdb43;
+  padding: 10px;
+  z-index: 1;
 }
 
 .speaker .single .info {
