@@ -2,8 +2,8 @@ import React from 'react';
 
 import './container.css';
 
-const Container =({ children, topPad=100 }) => (
-  <div style={{ paddingTop: topPad }} className="container">
+const Container =({ children, topPad }) => (
+  <div style={{ paddingTop: topPad && topPad  }} className="container">
     {children}
   </div>
 )

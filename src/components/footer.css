@@ -32,3 +32,10 @@
   color: #fff;
   font-size: 48px;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    width: 100%;
+    padding: 0 25px;
+  }
+}

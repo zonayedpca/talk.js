@@ -3,3 +3,16 @@
   margin: 0 auto;
   padding: 100px 0;
 }
+
+@media (max-width: 1199px) {
+  .container {
+    width: 100%;
+    padding: 100px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 0;
+  }
+}

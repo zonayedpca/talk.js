@@ -29,3 +29,22 @@
 .speaker .single .info p {
   font-weight: 300;
 }
+
+@media (max-width: 991px) {
+  .speaker .single {
+    width: calc(100% / 3 - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .speaker .single {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .speaker .single {
+    width: calc(100% - 30px);
+    text-align: center;
+  }
+}

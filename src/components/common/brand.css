@@ -12,3 +12,9 @@
   font-weight: 900;
   padding: 0 10px;
 }
+
+@media (max-width: 768px) {
+  .brand-area {
+    justify-content: center;
+  }
+}
