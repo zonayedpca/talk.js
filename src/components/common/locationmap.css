@@ -1,12 +1,11 @@
 .marker {
-  background: #2e2e2e;
+  text-align: center;
   padding: 15px 25px;
-  border-radius: 4px;
 }
 
 .marker h4,
 .marker p {
-  color: #fff;
+  color: #2e2e2e;
 }
 
 .marker h4 {

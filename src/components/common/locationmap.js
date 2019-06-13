@@ -2,9 +2,10 @@ import React from 'react';
 import {
   GoogleMap,
   withGoogleMap,
-  withScriptjs
+  Marker,
+  withScriptjs,
+  InfoWindow
 } from 'react-google-maps';
-import { MarkerWithLabel } from 'react-google-maps/lib/components/addons/MarkerWithLabel';
 
 import './locationmap.css';
 
@@ -182,19 +183,21 @@ const mapStyles = [
 export const LocationMap = withScriptjs(
   withGoogleMap(props => (
     <GoogleMap
-      defaultZoom={18}
+      defaultZoom={16}
       defaultCenter={{ lat: 23.7890018, lng: 90.4043484 }}
       defaultOptions={{ styles: mapStyles }}
     >
       {props.isMarkerShown && (
-        <MarkerWithLabel
+        <Marker
           position={{ lat: 23.7890018, lng: 90.4043484 }}
         >
+        <InfoWindow onCloseClick={props.onToggleOpen}>
           <div className="marker">
-            <h4>ShopHobe HQ</h4>
+            <h4>ShopHobe</h4>
             <p>Details Address Here!</p>
           </div>
-        </MarkerWithLabel>
+        </InfoWindow>
+        </Marker>
       )}
     </GoogleMap>
   ))
