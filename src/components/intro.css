@@ -68,9 +68,22 @@
 
   .intro {
     height: auto;
+    margin-top: 45px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
   }
 
   .details ul li {
     margin-top: 15px;
+  }
+
+  .details ul li p {
+    font-size: 18px;
   }
 }
