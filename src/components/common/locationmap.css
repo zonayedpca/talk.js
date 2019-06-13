@@ -1,0 +1,14 @@
+.marker {
+  background: #2e2e2e;
+  padding: 15px 25px;
+  border-radius: 4px;
+}
+
+.marker h4,
+.marker p {
+  color: #fff;
+}
+
+.marker h4 {
+  font-size: 28px;
+}
