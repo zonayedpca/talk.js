@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { database } from 'firebase';
+
 import { Container, Navbar } from './common';
 
 import './intro.css';
@@ -6,10 +8,15 @@ import guy from '../assets/images/guy.png';
 
 export default () => {
   const [positionY, setPostionY] = useState(0);
+  const [totalPeople, setTotalPeople] = useState(0);
+  const users = database().ref('users');
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       setPostionY(window.pageYOffset * 2);
+    })
+    users.on('value', (snapshot) => {
+      setTotalPeople(snapshot.numChildren());
     })
   })
   return (
@@ -29,7 +36,7 @@ export default () => {
                   <p>Date<small>29 June, 2019</small></p>
                 </li>
                 <li>
-                  <p>Registered<small>120 People</small></p>
+                  <p>Registered<small>{totalPeople} People</small></p>
                 </li>
               </ul>
             </div>

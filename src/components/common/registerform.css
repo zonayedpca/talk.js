@@ -1,0 +1,14 @@
+.alert {
+  margin-top: 15px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.alert.error {
+  color: #F44336;
+}
+
+.alert.success {
+  color: #4CAF50;
+}
