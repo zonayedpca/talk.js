@@ -3,6 +3,11 @@
   background: #ecdb43;
 }
 
+.sponsor-area .container {
+  position: relative;
+  z-index: 1;
+}
+
 .sponsor-area::before {
   content: "";
   position: absolute;
@@ -10,6 +15,19 @@
   height: 20px;
   top: -20px;
   background-image: url('../assets/images/wave.svg');
+}
+
+.sponsor-area:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: url('../assets/sponsors/bg.png');
+  background-size: contain;
+  background-position: center;
+  z-index: 0;
 }
 
 .sponsor {

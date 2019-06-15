@@ -1,4 +1,5 @@
 import React from 'react';
+import { Parallax } from 'react-scroll-parallax';
 
 import { Container, Navbar } from './common';
 
@@ -27,9 +28,11 @@ export default () => (
             </ul>
           </div>
         </div>
-        <div className="animation">
-          <img alt="guy" src={guy} />
-        </div>
+        <Parallax y={[150, -100]} tagOuter="figure">
+          <div className="animation">
+              <img alt="guy" src={guy} />
+          </div>
+        </Parallax>
       </div>
     </Container>
   </div>
