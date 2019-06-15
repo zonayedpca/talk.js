@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { database } from 'firebase';
 
 import { Input } from './input';
 import { Button } from './button';
 
+import firebase from '../../firebase';
 import './registerform.css';
 
 export const RegisterForm = () => {
@@ -16,7 +16,7 @@ export const RegisterForm = () => {
     success: ''
   }
   const [data, setData] = useState(INTIAL_STATE);
-  const users = database().ref('users');
+  const users = firebase.database().ref('users');
   const { name, phone, email, fb, error, success } = data;
   const hasAllData = name.length && phone.length && email.length && fb.length;
 

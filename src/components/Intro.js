@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { database } from 'firebase';
 
 import { Container, Navbar } from './common';
 
+import firebase from '../firebase';
 import './intro.css';
 import guy from '../assets/images/guy.png';
 
 export default () => {
   const [positionY, setPostionY] = useState(0);
   const [totalPeople, setTotalPeople] = useState(0);
-  const users = database().ref('users');
+  const users = firebase.database().ref('users');
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
