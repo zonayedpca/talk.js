@@ -11,7 +11,7 @@ export default () => {
   return (
     <div className="action-area">
       <Container>
-        <Title title="Get Enrolled" content="Hey there you want to join this event? Please Register Yourself beforehand" />
+        <Title title="Get Registered" content="Hey there you want to join this event? Please Register Yourself beforehand" />
         <div className="action">
           <ul>
             <li><Button style={{ borderColor: '#045fa4', color: '#045fa4' }} onClick={() => setShowForm(!showForm)} title={showForm ? 'Hide' : 'Register Now'} /></li>
@@ -20,7 +20,7 @@ export default () => {
         { showForm ? <RegisterForm /> :
           <div className="wait">
             <img alt="cat" src={cat} />
-            <p>If You want to know more about this event, scroll below</p>
+            <p>If You want to know more about this event, scroll below...</p>
           </div>}
       </Container>
     </div>

@@ -1,5 +1,15 @@
 .sponsor-area {
-  background: #ebebeb;
+  position: relative;
+  background: #ecdb43;
+}
+
+.sponsor-area::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: -20px;
+  background-image: url('../assets/images/wave.svg');
 }
 
 .sponsor {

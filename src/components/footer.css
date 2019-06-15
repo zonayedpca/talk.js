@@ -44,10 +44,15 @@
     width: 100%;
     padding: 0 25px;
   }
-}
 
-@media (max-width: 480px) {
+  .footer .logo {
+    transform: scale(1.2);
+  }
+
   .event h3 {
     font-size: 36px;
   }
+}
+
+@media (max-width: 480px) {
 }
