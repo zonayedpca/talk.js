@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { Container, Title, Button, RegisterForm } from './common';
 
@@ -7,6 +7,17 @@ import cat from '../assets/animations/cat.gif';
 
 export default () => {
   const [showForm, setShowForm] = useState(false);
+  const [positionX, setPostionX] = useState(0);
+  const catRef = useRef();
+
+  useEffect(() => {
+    const startMoving = catRef.current.offsetTop - 200;
+    window.addEventListener('scroll', () => {
+      if(window.pageYOffset > startMoving) {
+        setPostionX((window.pageYOffset - startMoving) * 2);
+      }
+    })
+  })
 
   return (
     <div className="action-area">
@@ -19,7 +30,9 @@ export default () => {
         </div>
         { showForm ? <RegisterForm /> :
           <div className="wait">
-            <img alt="cat" src={cat} />
+            <div style={{ transform: `translate3d(${positionX}px, 0, 0)` }} ref={catRef}>
+              <img alt="cat" src={cat} />
+            </div>
             <p>If You want to know more about this event, scroll below...</p>
           </div>}
       </Container>
