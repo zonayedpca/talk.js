@@ -11,12 +11,14 @@ export default () => {
   const catRef = useRef();
 
   useEffect(() => {
-    const startMoving = catRef.current.offsetTop - 200;
-    window.addEventListener('scroll', () => {
-      if(window.pageYOffset > startMoving) {
-        setPostionX((window.pageYOffset - startMoving) * 2);
-      }
-    })
+    if(!showForm) {
+      const startMoving = catRef.current.offsetTop - 200;
+      window.addEventListener('scroll', () => {
+        if(window.pageYOffset > startMoving) {
+          setPostionX((window.pageYOffset - startMoving) * 2);
+        }
+      })
+    }
   })
 
   return (
