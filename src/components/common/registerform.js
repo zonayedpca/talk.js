@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 import { Input } from './input';
 import { Button } from './button';
 
-import firebase from '../../firebase';
 import './registerform.css';
 
 export const RegisterForm = () => {
@@ -13,32 +13,40 @@ export const RegisterForm = () => {
     email: '',
     fb: '',
     error: '',
-    success: ''
+    success: '',
+    loading: false
   }
   const [data, setData] = useState(INTIAL_STATE);
-  const users = firebase.database().ref('users');
-  const { name, phone, email, fb, error, success } = data;
+  const { name, phone, email, fb, error, success, loading } = data;
   const hasAllData = name.length && phone.length && email.length && fb.length;
 
   const handleChange = (input, name) => {
-    setData({ ...data, [name]: input });
+    setData({ ...data, loading: false, [name]: input });
+  }
+
+  const storeData = async() => {
+    try {
+      handleChange(true, 'loading')
+      const { data: gotData } = await axios.post('https://meetupjs-gdydetsyal.now.sh/users', {
+        name,
+        phone,
+        email,
+        fb
+      });
+      if(gotData.success) {
+        setData({ ...INTIAL_STATE, loading: false, success: gotData.message });
+      } else {
+        handleChange(`We couldn't store the data!`, 'error')
+      }
+    } catch(err) {
+      handleChange(`Something went wrong with your request!`, 'error')
+    }
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(hasAllData) {
-      users.push({
-        name,
-        phone,
-        email,
-        fb
-      }, (error) => {
-        if(error) {
-          handleChange('Something went wrong! Try Again', 'error');
-        } else {
-          setData({ ...INTIAL_STATE, success: 'You record has been stored sucesfully!' });
-        }
-      });
+      storeData();
     } else {
       handleChange('All the information are required!', 'error');
     }
@@ -54,6 +62,7 @@ export const RegisterForm = () => {
         <Input name="email" placeholder="Email" value={email} onChange={handleChange} />
         <Input name="fb" placeholder="Facebook Username" value={fb} onChange={handleChange} />
       </div>
+      {loading && <p className="alert loading">We are storing your data...</p>}
       {(error || success ) && <p className={`alert ${error ? 'error' : 'success'}`}>{error || success}</p>}
       <Button style={{ marginTop: 25, backgroundColor: hasAllData ? '#2e2e2e' : '#fff', color: hasAllData ? '#fff' : '#2e2e2e', cursor: hasAllData ? 'pointer' : 'not-allowed', opacity: hasAllData ? 1 : 0.5 }} type="submit" title="Register" />
     </form>

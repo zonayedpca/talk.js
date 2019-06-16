@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import { Container, Navbar } from './common';
 
-import firebase from '../firebase';
 import './intro.css';
 import guy from '../assets/images/guy.png';
 
 export default () => {
   const [positionY, setPostionY] = useState(0);
-  const [totalPeople, setTotalPeople] = useState(0);
-  const users = firebase.database().ref('users');
+  const [count, setCount] = useState('...');
 
   useEffect(() => {
     window.addEventListener('scroll', (e) => {
       setPostionY(window.pageYOffset * 2);
-    })
-    users.on('value', (snapshot) => {
-      setTotalPeople(snapshot.numChildren());
-    })
+    });
+    getCount();
   })
+
+  const getCount = async() => {
+    try {
+      const { data } = await axios('https://meetupjs-gdydetsyal.now.sh/users/count');
+      setCount(data.total)
+    } catch {
+      setCount('...')
+    }
+  }
+
   return (
     <div className="intro-area">
       <Container topPad="0">
@@ -36,7 +43,7 @@ export default () => {
                   <p>Date<small>29 June, 2019</small></p>
                 </li>
                 <li>
-                  <p>Registered<small>{totalPeople} People</small></p>
+                  <p>Registered<small>{count} People</small></p>
                 </li>
               </ul>
             </div>
