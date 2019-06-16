@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 
 function SEO() {
-  const title = 'Meetup.js - Grand JavaScript Meetup';
+  const title = 'Talk.js - Grand JavaScript Meetup';
   const metaDescription = 'A Long-awaited Developers Event. A meetup for Bangladeshi JavaScript developers. Happening on 29th of June, Banani, Dhaka. Register Yourself beforehand';
 
   return (
@@ -52,7 +52,7 @@ function SEO() {
         },
         {
           name: `twitter:creator`,
-          content: 'meetup.js',
+          content: 'talk.js',
         },
         {
           name: `twitter:title`,

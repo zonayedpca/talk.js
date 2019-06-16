@@ -7,7 +7,7 @@ import './brand.css';
 const Brand = () => (
   <div className="brand-area">
     <Logo />
-    <p>Meetup.js</p>
+    <p>Talk.js</p>
   </div>
 )
 
