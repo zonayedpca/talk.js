@@ -21,7 +21,7 @@ export const RegisterForm = () => {
   const hasAllData = name.length && phone.length && email.length && fb.length;
 
   const handleChange = (input, name) => {
-    setData({ ...data, loading: false, [name]: input });
+    setData({ ...data, error: '', success: '', loading: false, [name]: input });
   }
 
   const storeData = async() => {
@@ -64,7 +64,7 @@ export const RegisterForm = () => {
       </div>
       {loading && <p className="alert loading">We are storing your data...</p>}
       {(error || success ) && <p className={`alert ${error ? 'error' : 'success'}`}>{error || success}</p>}
-      <Button style={{ marginTop: 25, backgroundColor: hasAllData ? '#2e2e2e' : '#fff', color: hasAllData ? '#fff' : '#2e2e2e', cursor: hasAllData ? 'pointer' : 'not-allowed', opacity: hasAllData ? 1 : 0.5 }} type="submit" title="Register" />
+      <Button style={{ marginTop: 25, backgroundColor: '#2e2e2e', color: '#fff', cursor: hasAllData ? 'pointer' : 'not-allowed', opacity: hasAllData ? 1 : 0.5 }} type="submit" title="Register" />
     </form>
   )
 }

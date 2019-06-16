@@ -1,10 +1,9 @@
 button {
-  border: solid 2px #2e2e2e;
-  background: none;
-  color: #2e2e2e;
+  border: none;
+  background: #ebebeb;
+  color: #fff;
   padding: 15px 25px;
   font-weight: 900;
-  border-radius: 4px;
   text-transform: uppercase;
   cursor: pointer;
 }

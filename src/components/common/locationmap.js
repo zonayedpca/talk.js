@@ -8,6 +8,7 @@ import {
 } from 'react-google-maps';
 
 import './locationmap.css';
+import pin from '../../assets/images/pin.png';
 
 const mapStyles = [
   {
@@ -189,14 +190,17 @@ export const LocationMap = withScriptjs(
     >
       {props.isMarkerShown && (
         <Marker
+          icon={pin}
           position={{ lat: 23.7890018, lng: 90.4043484 }}
         >
-        <InfoWindow onCloseClick={props.onToggleOpen}>
-          <div className="marker">
-            <h4>ShopHobe</h4>
-            <p>Details Address Here!</p>
-          </div>
-        </InfoWindow>
+          <InfoWindow
+            onCloseClick={props.onToggleOpen}
+          >
+            <div className="marker">
+              <h4>ShopHobe</h4>
+              <p>Details Address Here!</p>
+            </div>
+          </InfoWindow>
         </Marker>
       )}
     </GoogleMap>

@@ -56,6 +56,22 @@
   font-weight: 300;
 }
 
+.speaker .single .image img:hover {
+  animation: moveImage 1s alternate;
+}
+
+@keyframes moveImage {
+  0% {
+    transform: translate3d(0, 0, 0);
+  } 33% {
+    transform: translate3d(-5px, 5px, 0);
+  } 66% {
+    transform: translate3d(5px, -5px, 0);
+  } 100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 @media (max-width: 991px) {
   .speaker .single {
     width: calc(100% / 3 - 30px);

@@ -17,19 +17,6 @@
   background-image: url('../assets/images/wave.svg');
 }
 
-.sponsor-area:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background: url('../assets/sponsors/bg.png');
-  background-size: contain;
-  background-position: center;
-  z-index: 0;
-}
-
 .sponsor {
   display: flex;
   flex-wrap: wrap;
@@ -45,6 +32,7 @@
 
 .sponsor .single img {
   width: calc(100% - 50px);
+  transition: 2s all;
 }
 
 @media (max-width: 991px) {

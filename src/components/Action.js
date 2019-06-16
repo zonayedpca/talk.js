@@ -14,7 +14,7 @@ export default () => {
         <Title title="Get Registered" content="Hey there you want to join this event? Please Register Yourself beforehand" />
         <div className="action">
           <ul>
-            <li><Button style={{ borderColor: '#045fa4', color: '#045fa4' }} onClick={() => setShowForm(!showForm)} title={showForm ? 'Hide' : 'Register Now'} /></li>
+            <li><Button style={{ background: '#045fa4' }} onClick={() => setShowForm(!showForm)} title={showForm ? 'Hide' : 'Register Now'} /></li>
           </ul>
         </div>
         { showForm ? <RegisterForm /> :
