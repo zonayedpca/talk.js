@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SEO from './components/Seo';
 import Intro from './components/Intro';
 import Action from './components/Action';
 import Speaker from './components/Speaker';
@@ -13,6 +14,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
+      <SEO />
       <Intro />
       <Action />
       <Speaker />
