@@ -5,7 +5,6 @@ import Intro from './components/Intro';
 import About from './components/About';
 import Action from './components/Action';
 import Speaker from './components/Speaker';
-import Schedule from './components/Schedule';
 import Sponsor from './components/Sponsor';
 import Location from './components/Location';
 import Footer from './components/Footer';

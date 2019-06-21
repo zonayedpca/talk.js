@@ -1,29 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Container, Title, Button, RegisterForm } from './common';
+import { Container, Title, RegisterForm } from './common';
 
 import './action.css';
-import cat from '../assets/animations/cat.gif';
 
 export default () => {
-  const [showForm, setShowForm] = useState(false);
-
   return (
-    <div className="action-area">
+    <div id="ticket" className="action-area">
       <Container>
-        <Title title="Get Registered" content="Hey there you want to join this event? Please Register Yourself beforehand" />
-        <div className="action">
-          <ul>
-            <li><Button style={{ background: '#045fa4' }} onClick={() => setShowForm(!showForm)} title={showForm ? 'Hide' : 'Register Now'} /></li>
-          </ul>
+        <div className="ticket-area">
+          <div className="ticket-form">
+            <Title title="Get Ticket" content="Hey there you want to join this event? Please Register Yourself beforehand" />
+            <RegisterForm />
+          </div>
+          <div className="with-ticket">
+            <h3>Each Ticket for BDT250</h3>
+            <p>You will get</p>
+            <ul>
+              <li>T-Shirt</li>
+              <li>Snacks</li>
+              <li>Coffee</li>
+              <li>Water</li>
+              <li>And Valuable Seepch</li>
+            </ul>
+          </div>
         </div>
-        { showForm ? <RegisterForm /> :
-          <div className="wait">
-            <div>
-              <img alt="cat" src={cat} />
-            </div>
-            <p>If You want to know more about this event, scroll below...</p>
-          </div>}
       </Container>
     </div>
   )

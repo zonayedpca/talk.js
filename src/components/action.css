@@ -2,6 +2,11 @@
   overflow: hidden;
 }
 
+.action-area .title {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
 .action {
   width: 640px;
   margin: 0 auto;
@@ -9,19 +14,22 @@
   z-index: 1;
 }
 
-.wait {
-  text-align: center;
+.ticket-area {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.wait img {
-  height: 160px;
+.ticket-area>* {
+  flex: 1;
 }
 
 form {
-  text-align: center;
-  width: 640px;
   margin: 0 auto;
   margin-top: 25px;
+}
+
+form button {
+  margin-left: 5px;
 }
 
 @media (max-width: 768px) {

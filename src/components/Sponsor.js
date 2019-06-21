@@ -14,7 +14,7 @@ const sponsors = [
 ];
 
 export default () => (
-  <div className="sponsor-area">
+  <div id="sponsor" className="sponsor-area">
     <Container>
       <Title title="Sponsor" content="People who made this possible" />
       <div className="sponsor">

@@ -4,6 +4,10 @@
   color: #fff;
 }
 
+.footer-area .container {
+  padding: 50px 0;
+}
+
 .footer {
   margin: 0 auto;
   display: flex;

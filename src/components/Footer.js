@@ -10,7 +10,7 @@ export default () => (
       <div className="footer">
         <div className="event">
           <Logo />
-          <h3>Meetup.js</h3>
+          <h3>Talk.js</h3>
         </div>
         <ul>
           <li><a target="__blank" rel="noopener noreferrer" href="https://devsonket.com">Link1</a></li>

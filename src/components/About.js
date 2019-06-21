@@ -5,7 +5,7 @@ import { Container, Title } from './common';
 import './about.css';
 
 const About = () => (
-    <div className="about-area">
+    <div id="about" className="about-area">
       <Container>
         <div className="about">
           <div className="about-details">
