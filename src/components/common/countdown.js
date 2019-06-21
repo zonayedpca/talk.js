@@ -34,16 +34,16 @@ const CountDown = () => {
   return (
     <div className="intro-time">
       <div className="time">
-        <p>{days}<span>{`Day${days > 1 && 's'}`}</span></p>
+        <p>{days}<span>{`Day${days > 1 ? 's' : ''}`}</span></p>
       </div>
       <div className="time">
-        <p>{hours}<span>{`Hour${hours > 1 && 's'}`}</span></p>
+        <p>{hours}<span>{`Hour${hours > 1 ? 's' : ''}`}</span></p>
       </div>
       <div className="time">
-        <p>{minutes}<span>{`Minute${minutes > 1 && 's'}`}</span></p>
+        <p>{minutes}<span>{`Minute${minutes > 1 ? 's' : ''}`}</span></p>
       </div>
       <div className="time">
-        <p>{seconds}<span>{`Second${seconds > 1 && 's'}`}</span></p>
+        <p>{seconds}<span>{`Second${seconds > 1 ? 's' : ''}`}</span></p>
       </div>
     </div>
   )
