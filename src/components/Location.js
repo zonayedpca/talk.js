@@ -2,6 +2,8 @@ import React from 'react';
 
 import { LocationMap } from './common';
 
+import './location.css';
+
 export default () => (
   <div id="location" className="location-area">
     <LocationMap
