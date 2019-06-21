@@ -107,6 +107,7 @@
 @media (max-width: 768px) {
   .intro-area .info {
     flex-direction: column-reverse;
+    margin-top: 85px;
   }
 
   .intro-area::after {
@@ -118,6 +119,10 @@
 
   .intro {
     text-align: center;
+  }
+
+  .intro-time .time {
+    padding: 10px 15px;
   }
 
   .intro p,

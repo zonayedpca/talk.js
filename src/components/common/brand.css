@@ -16,6 +16,6 @@
 
 @media (max-width: 768px) {
   .brand-area {
-    justify-content: center;
+    padding-bottom: 0;
   }
 }

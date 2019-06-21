@@ -38,6 +38,19 @@ form button {
     padding: 0 25px;
   }
 
+  .ticket-area>* {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .action-area .title {
+    text-align: center;
+  }
+
+  .with-ticket {
+    margin-top: 25px;
+  }
+
   form {
     width: 100%;
     padding: 0 25px;

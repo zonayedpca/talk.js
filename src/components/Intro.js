@@ -36,7 +36,7 @@ export default () => {
                   <p>Location<small>Banani, Dhaka</small></p>
                 </li>
                 <li>
-                  <p>Date<small>29 June, 2019</small></p>
+                  <p>Date<small>06 July, 2019</small></p>
                 </li>
                 <li>
                   <p>Registered<small>{count} People</small></p>

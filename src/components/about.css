@@ -33,3 +33,22 @@
   background: #045fa4;
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about .title {
+    text-align: center;
+  }
+
+  .about>* {
+    flex: 1 1 100%;
+  }
+
+  .about .about-video {
+    margin-bottom: 25px;
+  }
+}

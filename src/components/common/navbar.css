@@ -42,3 +42,69 @@
   font-size: 16px;
   border-radius: 4px;
 }
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 30px;
+  background: #f44336;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.navbar.fixed .mobile-menu {
+  right: 25px;
+  top: 20px;
+}
+
+@media (max-width: 991px) {
+  .navbar.fixed {
+    padding: 0 4%;
+  }
+
+  .navbar ul li {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-start;
+  }
+
+  .navbar>* {
+    flex: 1 1 100%;
+  }
+
+  .navbar ul {
+    display: none;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #ecdb43;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .navbar ul.mobile-nav {
+    display: block;
+  }
+
+  .navbar.fixed .navbar ul {
+    padding: 0;
+  }
+
+  .navbar ul li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
