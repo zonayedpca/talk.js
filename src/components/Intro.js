@@ -4,16 +4,11 @@ import axios from 'axios';
 import { Container, Navbar } from './common';
 
 import './intro.css';
-import guy from '../assets/images/guy.png';
 
 export default () => {
-  const [positionY, setPostionY] = useState(0);
   const [count, setCount] = useState('...');
 
   useEffect(() => {
-    window.addEventListener('scroll', (e) => {
-      setPostionY(window.pageYOffset * 2);
-    });
     getCount();
   })
 
@@ -27,7 +22,7 @@ export default () => {
   }
 
   return (
-    <div className="intro-area">
+    <div id="intro" className="intro-area">
       <Container topPad="0">
         <Navbar />
         <div className="info">

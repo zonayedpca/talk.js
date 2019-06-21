@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 25px 0;
+  text-decoration: none;
 }
 
 .brand-area p {
