@@ -4,33 +4,6 @@
   height: 700px;
 }
 
-.intro-area::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: url('../assets/images/bg.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
-  z-index: 0;
-}
-
-.intro-area::after {
-  content: "";
-  position: absolute;
-  bottom: -45px;
-  left: calc(50% - 50px);
-  height: 100px;
-  background: #ecdb43;
-  width: 100px;
-  border-radius: 8px;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
 .intro-area .info {
   display: flex;
   flex-wrap: wrap;

@@ -1,4 +1,28 @@
 .navbar {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2e2e2e;
+}
+
+.navbar ul li a.btn {
+  background: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
 }
