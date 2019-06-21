@@ -22,7 +22,7 @@ export const Navbar = () => {
     const top = el.offsetTop - 80;
     console.log(top);
     e.preventDefault();
-    window.scroll({top, left: 0, behavior: 'smooth' })
+    window.scroll({top, left: 0, behavior: 'smooth' });
   }
 
   return (
