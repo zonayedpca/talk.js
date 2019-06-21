@@ -32,8 +32,22 @@ export default () => {
         <Navbar />
         <div className="info">
           <div className="intro">
-            <p>A Long-awaited Developers Event</p>
+            <div className="intro-time">
+              <div className="time">
+                <p>10<span>Days</span></p>
+              </div>
+              <div className="time">
+                <p>10<span>Hours</span></p>
+              </div>
+              <div className="time">
+                <p>10<span>Minutes</span></p>
+              </div>
+              <div className="time">
+                <p>10<span>Seconds</span></p>
+              </div>
+            </div>
             <h1>Grand JavaScript Meetup</h1>
+            <p>A Long-awaited Developers Event</p>
             <div className="details">
               <ul>
                 <li>

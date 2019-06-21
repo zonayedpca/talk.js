@@ -1,0 +1,35 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about>* {
+  flex: 1;
+}
+
+.about .title {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.about p {font-size: 22px;line-height: 1.7;}
+
+.about-video {
+  align-self: center;
+  text-align: center;
+}
+
+.about-action {
+  margin-top: 25px;
+}
+
+.btn-ticket {
+  background: #4caf50;
+  color: #fff;
+}
+
+.btn-more {
+  margin-left: 15px;
+  background: #045fa4;
+  color: #fff;
+}

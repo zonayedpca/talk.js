@@ -2,6 +2,7 @@ import React from 'react';
 
 import SEO from './components/Seo';
 import Intro from './components/Intro';
+import About from './components/About';
 import Action from './components/Action';
 import Speaker from './components/Speaker';
 import Schedule from './components/Schedule';
@@ -16,11 +17,11 @@ const App = () => {
     <div className="App">
       <SEO />
       <Intro />
-      <Action />
+      <About />
       <Speaker />
-      <Schedule />
       <Sponsor />
       <Location />
+      <Action />
       <Footer />
     </div>
   );
