@@ -9,7 +9,7 @@ export const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if(window.pageYOffset > 1000) {
+      if(window.pageYOffset > 600) {
         setFixed(true);
       } else {
         setFixed(false);
