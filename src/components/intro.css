@@ -161,6 +161,10 @@
     margin-top: 45px;
   }
 
+  .intro-time {
+    justify-content: center;
+  }
+
   .details {
     margin: 0;
   }
