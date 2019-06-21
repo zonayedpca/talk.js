@@ -3,9 +3,9 @@
 <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 30 15" style="enable-background:new 0 0 30 15;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#ECDB43;}
+	.st0{fill:#FFFFFF;}
 </style>
 <title>wavyborder-bottom</title>
 <path class="st0" d="M30,15H0v-2.6c0.7,0,1.4-0.3,1.8-0.8l8.5-9.4c2.2-2.5,6.1-2.8,8.6-0.6c0.2,0.2,0.4,0.4,0.6,0.6l8.5,9.4
-	c0.5,0.5,1.1,0.8,1.8,0.8V15z"/>
+	c0.5,0.5,1.1,0.8,1.8,0.8V15H30z"/>
 </svg>
