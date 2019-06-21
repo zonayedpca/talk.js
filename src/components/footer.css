@@ -5,14 +5,14 @@
 }
 
 .footer {
-  width: 640px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer .logo {
-  margin: 0 auto;
-  margin-bottom: 25px;
-  transform: scale(1.5);
+  margin-right: 15px;
 }
 
 .footer ul {
@@ -30,13 +30,13 @@
 }
 
 .event {
-  padding: 25px 0;
-  border-bottom: solid 3px #fff;
+  display: flex;
+  align-items: center;
 }
 
 .event h3 {
   color: #fff;
-  font-size: 48px;
+  font-size: 42px;
 }
 
 @media (max-width: 768px) {
