@@ -17,16 +17,24 @@ export const Navbar = () => {
     })
   })
 
+  const onSelfScroll = (e, id) => {
+    const el = document.getElementById(id);
+    const top = el.offsetTop - 80;
+    console.log(top);
+    e.preventDefault();
+    window.scroll({top, left: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className={`navbar ${fixed && `fixed`}`}>
       <Brand />
       <ul>
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#speaker">Speaker</a></li>
-        <li><a href="#sponsor">Sponsor</a></li>
-        <li><a href="#location">Place</a></li>
-        <li><a className="btn" href="#ticket">Buy Ticket</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'intro')} href="#intro">Home</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'about')} href="#about">About</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'speaker')} href="#speaker">Speaker</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'sponsor')} href="#sponsor">Sponsor</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'location')} href="#location">Place</a></li>
+        <li><a onClick={(e) => onSelfScroll(e, 'ticket')} className="btn" href="#ticket">Buy Ticket</a></li>
       </ul>
     </div>
   )
