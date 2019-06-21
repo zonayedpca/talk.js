@@ -4,11 +4,26 @@
   height: 700px;
 }
 
+.intro-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('../assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  z-index: 0;
+}
+
 .intro-area .info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
 }
 
 .intro-area .info>* {
@@ -33,6 +48,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 480px;
   z-index: 1;
   flex: 2;

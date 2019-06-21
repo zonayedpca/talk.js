@@ -62,9 +62,6 @@ export default () => {
               </ul>
             </div>
           </div>
-          <div style={{ transform: `translate3d(0, -${positionY}px, 0)` }} className="animation">
-            <img alt="guy" src={guy} />
-          </div>
         </div>
       </Container>
     </div>

@@ -127,6 +127,8 @@
 .speaker-details .image img {
   width: 100px;
   border-radius: 100%;
+  border: solid 3px #3e3e3e;
+  padding: 5px;
 }
 
 .speaker-details .image {
