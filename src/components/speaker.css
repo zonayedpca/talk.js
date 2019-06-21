@@ -16,7 +16,7 @@
 
 .mark h4 {
   display: inline-block;
-  background: #333;
+  background: #3e3e3e;
   color: #fff;
   padding: 5px 10px;
   margin: 15px 0;
@@ -58,6 +58,8 @@
   left: calc(50% - 9px);
   border-radius: 10px;
   background: #4caf50;
+  border: solid 3px #3e3e3e;
+  box-sizing: border-box;
 }
 
 .speaker-time h4 {
