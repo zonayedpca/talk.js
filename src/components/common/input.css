@@ -7,6 +7,10 @@ input {
   width: calc(100%/2 - 10px);
 }
 
+input[name=trid] {
+  width: calc(100% - 10px);
+}
+
 @media (max-width: 480px) {
   input {
     width: 100%;

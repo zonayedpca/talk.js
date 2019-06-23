@@ -6,19 +6,32 @@ import { Button } from './button';
 
 import './registerform.css';
 
+const TR_USER_LIMIT = 100;
+
+const validateEmail = (email) => {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+}
+
+const validatePhone = (phone) => {
+  var re = /^(?:\+88|01)?\d{11}$/;
+  return re.test(phone);
+}
+
 export const RegisterForm = () => {
   const INTIAL_STATE = {
     name: '',
     phone: '',
     email: '',
     fb: '',
+    trid: '',
     error: '',
     success: '',
     loading: false
   }
   const [data, setData] = useState(INTIAL_STATE);
-  const { name, phone, email, fb, error, success, loading } = data;
-  const hasAllData = name.length && phone.length && email.length && fb.length;
+  const { name, phone, email, fb, trid, error, success, loading } = data;
+  const hasAllData = name.length > 2 && validatePhone(phone) && validateEmail(email) && trid.length > 3;
 
   const handleChange = (input, name) => {
     setData({ ...data, error: '', success: '', loading: false, [name]: input });
@@ -27,11 +40,12 @@ export const RegisterForm = () => {
   const storeData = async() => {
     try {
       handleChange(true, 'loading')
-      const { data: gotData } = await axios.post('https://meetupjs-gdydetsyal.now.sh/users', {
+      const { data: gotData } = await axios.post('https://meetupjsdev.now.sh/users', {
         name,
         phone,
         email,
-        fb
+        fb,
+        trid
       });
       if(gotData.success) {
         setData({ ...INTIAL_STATE, loading: false, success: gotData.message });
@@ -61,6 +75,9 @@ export const RegisterForm = () => {
       <div className="form-group">
         <Input name="email" placeholder="Email" value={email} onChange={handleChange} />
         <Input name="fb" placeholder="Facebook Username" value={fb} onChange={handleChange} />
+      </div>
+      <div className="form-group">
+        <Input name="trid" placeholder="Transaction ID" value={trid} onChange={handleChange} />
       </div>
       {loading && <p className="alert loading">We are storing your data...</p>}
       {(error || success ) && <p className={`alert ${error ? 'error' : 'success'}`}>{error || success}</p>}
